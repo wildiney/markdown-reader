@@ -1,0 +1,39 @@
+body {
+  background-color: lightgray;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 20px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media(min-width:800px) {
+  .container {
+    width: 800px;
+  }
+}
+
+.markdown_viewer {
+  position: absolute;
+  top: 25px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  border: 1px solid gray;
+  background: white;
+  overflow-y: scroll;
+  padding: 20px 30px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.markdown_viewer img {
+  max-width: 100%;
+}
