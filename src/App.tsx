@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import icon from '../assets/icon.svg';
+import './App.global.css';
 
-function App() {
+const Hello = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+    <div>
+      <div className="Hello">
+        <img width="200px" alt="icon" src={icon} />
+      </div>
+      <h1>electron-react-boilerplate</h1>
+      <div className="Hello">
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://electron-react-boilerplate.js.org/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          Learn React
+          <button type="button">
+            <span role="img" aria-label="books">
+              📚
+            </span>
+            Read our docs
+          </button>
         </a>
-      </header>
+        <a
+          href="https://github.com/sponsors/electron-react-boilerplate"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button type="button">
+            <span role="img" aria-label="books">
+              🙏
+            </span>
+            Donate
+          </button>
+        </a>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" component={Hello} />
+      </Switch>
+    </Router>
+  );
+}
